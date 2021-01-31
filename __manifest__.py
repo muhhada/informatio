@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    etldb module for odoo
+#    informatio module for odoo
 #    Copyright (C) 2020 
 #       Anton Goroshkin, 
 #       Oksana Goroshkina, 
@@ -26,12 +26,12 @@
 
     'summary': """
 
-        Informatio
+        informatio
 
     """,
 
     'description': """
-       Informatio 
+       informatio 
     """,
 
     'author': "Oksana Goroshkina, Anton Goroshkin",
@@ -53,7 +53,7 @@
 
         # 'menu.xml',
 
-        # 'views/etldb_resource_stage_view.xml',
+        # 'views/informatio_resource_stage_view.xml',
 
     ],
     'qweb': ['static/src/xml/*.xml']

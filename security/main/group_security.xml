@@ -1,47 +1,47 @@
 <odoo>
-    <record model="ir.module.category" id="etldb.group_access_category">
-        <field name="name">Informatio Knowledge Base</field>
-        <field name="description">Informatio Knowledge Base Access Group Category</field>
+    <record model="ir.module.category" id="informatio.group_access_category">
+        <field name="name">informatio Knowledge Base</field>
+        <field name="description">informatio Knowledge Base Access Group Category</field>
         <field name="sequence">220</field>
     </record>
 
-    <record model="res.groups" id="etldb.group_moderator">
+    <record model="res.groups" id="informatio.group_moderator">
         <field name="name">Moderator</field>
-        <field name="category_id" ref="etldb.group_access_category"/>
+        <field name="category_id" ref="informatio.group_access_category"/>
         <field name="users"
                eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"
         />
     </record>
 
-    <record model="res.groups" id="etldb.group_editor">
+    <record model="res.groups" id="informatio.group_editor">
         <field name="name">Editor</field>
-        <field name="category_id" ref="etldb.group_access_category"/>
+        <field name="category_id" ref="informatio.group_access_category"/>
     </record>
 
-    <record model="res.groups" id="etldb.group_user">
+    <record model="res.groups" id="informatio.group_user">
         <field name="name">User</field>
-        <field name="category_id" ref="etldb.group_access_category"/>
+        <field name="category_id" ref="informatio.group_access_category"/>
     </record>
 
 
         <!-- Патч безопасности -->
-    <record model="ir.rule" id="etldb.ir_attachment_rule_group_user">
+    <record model="ir.rule" id="informatio.ir_attachment_rule_group_user">
         <field name="name">ir.attachment: main user : full access with domain</field>
         <field name="model_id" ref="base.model_ir_attachment"/>
-        <field name="groups" eval="[(4,ref('etldb.group_user'))]"/>
+        <field name="groups" eval="[(4,ref('informatio.group_user'))]"/>
         <field name="global" eval="False"/>
         <field name="perm_read" eval="True"/>
         <field name="perm_create" eval="True"/>
         <field name="perm_write" eval="True"/>
         <field name="perm_unlink" eval="True" />
-        <field name="domain_force">['|',('etldb_security','=','center'),('etldb_security', '=', False)]</field>
+        <field name="domain_force">['|',('informatio_security','=','center'),('informatio_security', '=', False)]</field>
     </record>
 
     <!--Правила на операцию Чтение-->
-    <record model="ir.rule" id="etldb.resource_rule_group_user">
-        <field name="name">etldb.resource: main user : read only with domain</field>
-        <field name="model_id" ref="model_etldb_resource"/>
-        <field name="groups" eval="[(4,ref('etldb.group_user'))]"/>
+    <record model="ir.rule" id="informatio.resource_rule_group_user">
+        <field name="name">informatio.resource: main user : read only with domain</field>
+        <field name="model_id" ref="model_informatio_resource"/>
+        <field name="groups" eval="[(4,ref('informatio.group_user'))]"/>
         <field name="global" eval="False"/>
         <field name="perm_read" eval="True"/>
         <field name="perm_create" eval="False"/>
@@ -50,10 +50,10 @@
         <field name="domain_force">[('affiliation', '=', 'center'),('availability_id.system_name','=','opened')]</field>
     </record>
 
-    <record model="ir.rule" id="etldb.resource_rule_group_editor">
-        <field name="name">etldb.resource: main editor : read only with domain</field>
-        <field name="model_id" ref="model_etldb_resource"/>
-        <field name="groups" eval="[(4,ref('etldb.group_editor'))]"/>
+    <record model="ir.rule" id="informatio.resource_rule_group_editor">
+        <field name="name">informatio.resource: main editor : read only with domain</field>
+        <field name="model_id" ref="model_informatio_resource"/>
+        <field name="groups" eval="[(4,ref('informatio.group_editor'))]"/>
         <field name="global" eval="False"/>
         <field name="perm_read" eval="True"/>
         <field name="perm_create" eval="True"/>
@@ -62,10 +62,10 @@
         <field name="domain_force">[('affiliation', '=', 'center'),'|',('availability_id.system_name','=','opened'),('user_id','=',user.id)]</field>
     </record>
 
-    <record model="ir.rule" id="etldb.material_type_rule_group_user">
-        <field name="name">etldb.material_type: main : read only with domain</field>
-        <field name="model_id" ref="model_etldb_material_type"/>
-        <field name="groups" eval="[(4,ref('etldb.group_user'))]"/>
+    <record model="ir.rule" id="informatio.material_type_rule_group_user">
+        <field name="name">informatio.material_type: main : read only with domain</field>
+        <field name="model_id" ref="model_informatio_material_type"/>
+        <field name="groups" eval="[(4,ref('informatio.group_user'))]"/>
         <field name="global" eval="False"/>
         <field name="perm_read" eval="True"/>
         <field name="perm_create" eval="False"/>

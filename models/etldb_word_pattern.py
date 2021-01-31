@@ -2,7 +2,7 @@
 from odoo import models
 
 
-class InformatioWordPattern(models.Model):
-    _name = 'etldb.word_pattern'
-    _inherit = 'etldb_base.model'
+class informatioWordPattern(models.Model):
+    _name = 'informatio.word_pattern'
+    _inherit = 'informatio_base.model'
     _description = 'Ключевые слова'

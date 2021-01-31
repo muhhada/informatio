@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- <record model="ir.actions.act_url" id="etldb.action_cdto_work_page">
+    <!-- <record model="ir.actions.act_url" id="informatio.action_cdto_work_page">
         <field name="name">Кадры ЦТ</field>
         <field name="type">ir.actions.act_url</field>
         <field name="target">self</field>
         <field name="url">https://cdto.work</field>
     </record> -->
 
-    <record model="ir.ui.menu" id="etldb.menu_resource_handbook">
-        <field name="name">Informatio</field>
+    <record model="ir.ui.menu" id="informatio.menu_resource_handbook">
+        <field name="name">informatio</field>
         <field name="sequence" eval="150"/>
-        <field name="groups_id" eval="[(4, ref('etldb_base.group_moderator'))]"/>
+        <field name="groups_id" eval="[(4, ref('informatio_base.group_moderator'))]"/>
     </record>
 
-    <!-- <record id="etldb.menu_cdto_work" model="ir.ui.menu">
+    <!-- <record id="informatio.menu_cdto_work" model="ir.ui.menu">
         <field name="name">Кадры ЦТ</field>
         <field name="description">Центр подбора и кадрового развития специалистов в области цифровой трансформации</field>
         <field name="sequence" eval="140"/>
-        <field name="web_icon">etldb,static/description/cdto_work.png</field>
-        <field name="action" ref="etldb.action_cdto_work_page"/>
+        <field name="web_icon">informatio,static/description/cdto_work.png</field>
+        <field name="action" ref="informatio.action_cdto_work_page"/>
         <field name="groups_id"
-               eval="[(4, ref('etldb.group_foiv_moderator')),
-                      (4, ref('etldb.group_foiv_user'))]"
+               eval="[(4, ref('informatio.group_foiv_moderator')),
+                      (4, ref('informatio.group_foiv_user'))]"
         />
     </record>
 
-    <record model="ir.actions.act_url" id="etldb.action_cdto_wiki_page">
+    <record model="ir.actions.act_url" id="informatio.action_cdto_wiki_page">
         <field name="name">CDTO Wiki</field>
         <field name="type">ir.actions.act_url</field>
         <field name="target">self</field>
         <field name="url">https://cdto.wiki</field>
     </record>
 
-    <record model="ir.ui.menu" id="etldb.menu_cdto_wiki">
+    <record model="ir.ui.menu" id="informatio.menu_cdto_wiki">
         <field name="name">CDTO Wiki</field>
         <field name="description">Информационный ресурс, ориентированный на теорию и практику цифровой трансформации</field>
         <field name="sequence" eval="141"/>
-        <field name="web_icon">etldb,static/description/cdto_wiki.png</field>
-        <field name="action" ref="etldb.action_cdto_wiki_page"/>
+        <field name="web_icon">informatio,static/description/cdto_wiki.png</field>
+        <field name="action" ref="informatio.action_cdto_wiki_page"/>
         <field name="groups_id"
-               eval="[(4, ref('etldb.group_foiv_moderator')),
-                      (4, ref('etldb.group_foiv_user'))]"
+               eval="[(4, ref('informatio.group_foiv_moderator')),
+                      (4, ref('informatio.group_foiv_user'))]"
         />
     </record> -->
 

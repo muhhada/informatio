@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <template id="etldb.assets_backend"
-                  name="Informatio Assets Backend"
+        <template id="informatio.assets_backend"
+                  name="informatio Assets Backend"
                   inherit_id="web.assets_backend"
         >
             <xpath expr="//script[last()]" position="after">
                 <script type="text/javascript"
-                        src="/etldb/static/src/js/views/list/list_controller.js"
+                        src="/informatio/static/src/js/views/list/list_controller.js"
                 />
                 <script type="text/javascript"
-                        src="/etldb/static/src/js/tours/resource_center.js"
+                        src="/informatio/static/src/js/tours/resource_center.js"
                 />
                 <script type="text/javascript"
-                        src="/etldb/static/src/js/widgets/model_viewtime.js"
+                        src="/informatio/static/src/js/widgets/model_viewtime.js"
                 />
             </xpath>
         </template>
